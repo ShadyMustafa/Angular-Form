@@ -1,0 +1,126 @@
+form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3, h5 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+    margin-top: 15px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    color: white;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border: 1px solid #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
+button {
+    padding: 10px 15px;
+    margin: 15px 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    background-color: #003f7f;
+}
+
+div {
+    margin: 20px;
+    text-align: center;
+}
+
+.p {
+    font-size: 16px;
+    color: #444;
+}
+
+h1, h2 {
+    margin-top: 0;
+    color: #007bff;
+}
+
+button.add-qualification {
+    background-color: #28a745;
+}
+
+button.add-qualification:hover {
+    background-color: #218838;
+}
+
+button.add-qualification:active {
+    background-color: #1e7e34;
+}
+
+button.edit-button {
+    background-color: #ffc107;
+    margin-top: 20px;
+}
+
+button.edit-button:hover {
+    background-color: #e0a800;
+}
+
+button.edit-button:active {
+    background-color: #c69500;
+}
+
+/* For the preview section */
+.preview {
+    width: 60%;
+    margin: 20px auto;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.preview h2 {
+    text-align: center;
+    color: #007bff;
+}
+
+.preview p {
+    color: #333;
+    font-size: 16px;
+}
+
+.preview h5 {
+    color: #555;
+}
+.name{
+    font-size: 3rem;
+    font-weight:500;
+}

@@ -1,0 +1,47 @@
+<div *ngIf="submit;else show">
+    <form>
+      <h1>Portfolio</h1>
+      <h2>Personal Information</h2>
+      <label>Name </label>
+      <input type="text" name="userName" [(ngModel)]="nm" [ngStyle]="{'background-color': nm? 'green' : 'red'}">
+      <label>Email </label>
+      <input type="text" name="Email" [(ngModel)]="em" [ngStyle]="{'background-color': emailValid? 'green' : 'red'}" (input)="emailValidation(em)">
+      <label>Phone </label>
+      <input type="text" name="Phone" [(ngModel)]="ph" [ngStyle]="{'background-color': ph? 'green' : 'red'}">
+      <label>Address </label>
+      <input type="text" name="Address" [(ngModel)]="ad" [ngStyle]="{'background-color': ad? 'green' : 'red'}">
+    </form>
+    <h1>Qualifications</h1> 
+    <form *ngFor="let q of qualafications; let i = index">
+        <h2>Qualification {{i+1}}</h2>
+        <label>School/College </label>
+        <input type="text" name="education" [(ngModel)]="q.school">
+        <label>Degree </label>
+        <input type="text" name="degree" [(ngModel)]="q.degree">
+        <label>Year </label>
+        <input type="text" name="year" [(ngModel)]="q.year">
+    </form>
+    <div>
+      <button (click)="addQualifation()">Add Qualifications</button>
+      <button (click)="submitt()">Submit</button>
+    </div>
+</div>
+<ng-template #show>
+  <div>
+    <h2>Perview</h2>
+    <div>
+      <p [ngClass]="{'name':true}">{{nm}}</p>
+      <p>Email: {{em}}</p>
+      <p>Phone: {{ph}} </p>
+      <p>Address: {{ad}} </p>
+    </div>
+    <div>
+      <h3>Qualifications</h3>
+      <div *ngFor="let q of qualafications">
+        <h5>School/College: {{q.school}} </h5>
+        <h5>Degree: {{q.degree}} {{q.year}} </h5>
+      </div>
+      <button (click)="edit()">Edit</button>
+    </div>
+  </div>
+</ng-template>
